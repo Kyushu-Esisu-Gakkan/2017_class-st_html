@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8">
+		<title>Lesson 2 | It-Web 2017 Class S/T</title>
+		<script type="text/javascript"
+			src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<style type="text/css">
+			body {
+				background-color: white;
+				width: 600px;
+			}
+			span.keyword {
+				color: red;
+				font-size: 120%;
+				font-weight: bold;
+			}
+			#head_area{
+				width:600px;
+			}
+			#head_photo{
+				width:200px;
+			}
+			#head_photo img {
+				width: 200px;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Page Top -->
+		<div id="head_area">
+			<div id="head_photo">
+				<img src="http://it.kyushueisu.com/2017/samples/lesson-01/trial.jpg"></img>
+			</div>
+		</div>
+		<!-- Block 1 -->
+		<div id="step_1">
+			<h2>Step 1.&nbsp;Entry</h2>
+			<p>
+				Can you see Photo & Text?
+			</p>
+		</div>
+		<!-- Block 2 -->
+		<div id="step_2">
+			<h2>Step 2. Correct Source</h2>
+			<p>
+				Please watch <span class="keyword">tag pairs</span>,<br>
+				and spaces of beginnig of line, called 'Indent'.
+			</p>
+			<p>
+				Open tag &lt;...&gt; and Close tag &lt;/...&gt; has same indent,<br>
+				that is <span class="keyword">indent</span> shows the document's  structure.
+			</p>
+		</div>
+		<!-- javascript Program -->
+		<script type="text/javascript">
+			$(function(){
+				// ---- init
+				$('#step_1').show();
+				$('#step_2').hide();
+				$('#head_photo').click(function(){
+					$(this).animate({'margin-left':'200px','padding-top':'0px'},2000, function () {
+						$('#step_2').show();
+					});
+				});
+			});
+		</script>
+	</body>
+</html>

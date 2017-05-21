@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8">
+		<title>Lesson 6 Javascript Drill</title>
+
+		<!-- java script library -->
+		<script type="text/javascript"
+			src="https://code.jquery.com/jquery-3.2.1.min.js">
+		</script>
+
+		<!-- cascade style sheets (CSS) -->
+		<style type="text/css">
+			span.term, span.result {
+				font-size: 140%;
+			}
+			span.term {
+				color: blue;
+			}
+			span.result {
+				color: darkorange;
+				font-weight: bold;
+			}
+		</style>
+	</head>
+
+	<body>
+		<h2>Let's Calculate</h2>
+
+		<p>
+			<span id="term_1" class="term">3</span>
+			+
+			<span id="term_2" class="term">4</span>
+			=> 
+			<span id="result" class="result">??</span>
+		</p>
+
+		<!-- javascript program -->
+		<script type="text/javascript">
+		// ---- get text-values on html into javascript's variables.
+		var value_1 = $('#term_1').text();
+		var value_2 = $('#term_2').text();
+		
+		// ---- Convert Text to Number
+		value_1 = Number(value_1);
+		value_2 = Number(value_2);
+		
+		// ---- Calcurate
+		var result = value_1 + value_2;
+		
+		// ----  set the result to html's result part
+		$('#result').text(result);
+		</script>
+	</body>
+</html>

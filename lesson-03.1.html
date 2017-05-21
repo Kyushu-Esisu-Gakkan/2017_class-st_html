@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8">
+		<title>Lesson 3 | It-Web 2017 Class S/T</title>
+
+		<!-- java script library -->
+		<script type="text/javascript"
+			src="https://code.jquery.com/jquery-3.2.1.min.js">
+		</script>
+
+		<!-- cascade style sheets (CSS) -->
+		<style type="text/css">
+			body {
+				background-color: white;
+				width: 600px;
+			}
+			span.term, span.operator, span.result {
+				font-size: 120%;
+			}
+			span.term {
+				color: blue;
+			}
+			span.result {
+				color: orange;
+				font-weight: bold;
+				border: 1px solid #000000;
+				padding: 5px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!-- Page Top -->
+		<h2>Let's Calculate</h2>
+
+		<!-- number terms to calc -->
+		<p class="term_area">
+			<span id="term_1" class="term">3</span>
+			<span class="operator">+</span>
+			<span id="term_2" class="term">4</span>
+		</p>
+
+		<!-- result -->
+		<p class="result_area">
+			Answer is <span id="result" class="result">??</span>
+		</p>
+
+		<!-- javascript program -->
+		<script type="text/javascript">
+		// ---- get num_1, num_2 from html
+		var num_1 = $('#term_1').text();
+		var num_2 = $('#term_2').text();
+		
+		// ---- display result into html
+		$('#result').text(num_1 + num_2);
+		</script>
+	</body>
+</html>
