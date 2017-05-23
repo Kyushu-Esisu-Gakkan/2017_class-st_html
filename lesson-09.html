@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8">
+		<title>Lesson 9 Javascript Drill 3</title>
+	</head>
+
+	<body>
+		<h2>Let's JS #03</h2>
+
+		<!-- javascript program -->
+		<script type="text/javascript">
+		
+		// ---- declare variables
+		var str_1, num_1;
+		
+		// ---- input number from prompt() to variables
+		str_1 = prompt("Input any number?");
+		
+		// ---- Convert String to Number
+		num_1 = Number(str_1);
+		
+		// ---- display num_1
+		//   if not number show it
+		if (isNaN(num_1)) {
+			alert("not number...");
+		} else {
+			alert(num_1);
+		}
+		</script>
+	</body>
+</html>
